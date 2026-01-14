@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, Phone } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -21,7 +22,14 @@ export default function Navbar() {
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     <Link href="/" className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-                        <span className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">G</span>
+                        <Image
+                            src="/images/logo.jpg"
+                            alt="Greendoors Logo"
+                            width={180}
+                            height={50}
+                            className="h-12 w-auto object-contain"
+                            priority
+                        />
                         Greendoors
                     </Link>
 

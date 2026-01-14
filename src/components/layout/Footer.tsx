@@ -1,4 +1,6 @@
+
 import Link from 'next/link';
+import Image from 'next/image';
 import { Facebook, Instagram, Twitter, Mail, MapPin, Phone } from 'lucide-react';
 
 export default function Footer() {
@@ -9,10 +11,15 @@ export default function Footer() {
 
                     {/* Brand */}
                     <div className="space-y-4">
-                        <h3 className="text-2xl font-bold text-white flex items-center gap-2">
-                            <span className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">G</span>
-                            Greendoors
-                        </h3>
+                        <Link href="/" className="block">
+                            <Image
+                                src="/images/logo.jpg"
+                                alt="Greendoors"
+                                width={180}
+                                height={50}
+                                className="h-12 w-auto object-contain bg-white rounded-lg p-1"
+                            />
+                        </Link>
                         <p className="text-sm leading-relaxed max-w-xs">
                             Transforming spaces with color and precision. Premium painting services for residential and commercial properties in Mumbai.
                         </p>
